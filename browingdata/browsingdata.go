@@ -1,20 +1,21 @@
 package browingdata
 
 import (
+	"fmt"
 	"path"
 
-	"github.com/moond4rk/HackBrowserData/browingdata/bookmark"
-	"github.com/moond4rk/HackBrowserData/browingdata/cookie"
-	"github.com/moond4rk/HackBrowserData/browingdata/creditcard"
-	"github.com/moond4rk/HackBrowserData/browingdata/download"
-	"github.com/moond4rk/HackBrowserData/browingdata/extension"
-	"github.com/moond4rk/HackBrowserData/browingdata/history"
-	"github.com/moond4rk/HackBrowserData/browingdata/localstorage"
-	"github.com/moond4rk/HackBrowserData/browingdata/password"
-	"github.com/moond4rk/HackBrowserData/browingdata/sessionstorage"
-	"github.com/moond4rk/HackBrowserData/item"
-	"github.com/moond4rk/HackBrowserData/log"
-	"github.com/moond4rk/HackBrowserData/utils/fileutil"
+	"github.com/chiww/HackBrowserData/browingdata/bookmark"
+	"github.com/chiww/HackBrowserData/browingdata/cookie"
+	"github.com/chiww/HackBrowserData/browingdata/creditcard"
+	"github.com/chiww/HackBrowserData/browingdata/download"
+	"github.com/chiww/HackBrowserData/browingdata/extension"
+	"github.com/chiww/HackBrowserData/browingdata/history"
+	"github.com/chiww/HackBrowserData/browingdata/localstorage"
+	"github.com/chiww/HackBrowserData/browingdata/password"
+	"github.com/chiww/HackBrowserData/browingdata/sessionstorage"
+	"github.com/chiww/HackBrowserData/item"
+	"github.com/chiww/HackBrowserData/log"
+	"github.com/chiww/HackBrowserData/utils/fileutil"
 )
 
 type Data struct {
@@ -114,4 +115,38 @@ func (d *Data) addSources(items []item.Item) {
 			d.sources[source] = &extension.FirefoxExtension{}
 		}
 	}
+}
+
+func (d *Data) GetJson() (jsonMap map[string]interface{}, err error) {
+
+	jsonMap = make(map[string]interface{})
+
+	for _, source := range d.sources {
+		if source.Len() == 0 {
+			continue
+		}
+		jsonMap[source.Name()], err = getJson(source)
+		if err != nil {
+			fmt.Println(err)
+		}
+
+	}
+	return jsonMap, nil
+}
+
+func (d *Data) GetCSV() (csvMap map[string]interface{}, err error) {
+
+	csvMap = make(map[string]interface{})
+
+	for _, source := range d.sources {
+		if source.Len() == 0 {
+			continue
+		}
+		csvMap[source.Name()], err = getCSV(source)
+		if err != nil {
+			fmt.Println(err)
+		}
+
+	}
+	return csvMap, nil
 }

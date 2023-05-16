@@ -5,9 +5,14 @@
 
 # HackBrowserData
 
-[![Lint](https://github.com/moonD4rk/HackBrowserData/actions/workflows/lint.yml/badge.svg)](https://github.com/moonD4rk/HackBrowserData/actions/workflows/lint.yml) [![build](https://github.com/moonD4rk/HackBrowserData/actions/workflows/build.yml/badge.svg)](https://github.com/moonD4rk/HackBrowserData/actions/workflows/build.yml) [![Release](https://github.com/moonD4rk/HackBrowserData/actions/workflows/release.yml/badge.svg)](https://github.com/moonD4rk/HackBrowserData/actions/workflows/release.yml)
+```
+Follow from https://github.com/moonD4rk/HackBrowserData and thank you moonD4rk!
+```
 
-[中文说明](https://github.com/moonD4rk/HackBrowserData/blob/master/README_ZH.md)
+
+[![Lint](https://github.com/chiww/HackBrowserData/actions/workflows/lint.yml/badge.svg)](https://github.com/chiww/HackBrowserData/actions/workflows/lint.yml) [![build](https://github.com/chiww/HackBrowserData/actions/workflows/build.yml/badge.svg)](https://github.com/chiww/HackBrowserData/actions/workflows/build.yml) [![Release](https://github.com/chiww/HackBrowserData/actions/workflows/release.yml/badge.svg)](https://github.com/chiww/HackBrowserData/actions/workflows/release.yml)
+
+[中文说明](https://github.com/chiww/HackBrowserData/blob/master/README_ZH.md)
 
 `HackBrowserData` is a command-line tool for decrypting and exporting browser data  ( passwords, history, cookies, bookmarks, credit cards, download records, localStorage and extension ) from the browser. It supports the most popular browsers on the market and runs on Windows, macOS and Linux.
 
@@ -83,7 +88,7 @@ Based on Apple's security policy, some browsers **require a current user passwor
 
 ### Install
 
-Installation of `HackBrowserData` is dead-simple, just download [the release for your system](https://github.com/moonD4rk/HackBrowserData/releases) and run the binary.
+Installation of `HackBrowserData` is dead-simple, just download [the release for your system](https://github.com/chiww/HackBrowserData/releases) and run the binary.
 
 > In some situations, this security tool will be treated as a virus by Windows Defender or other antivirus software and can not be executed. The code is all open source, you can modify and compile by yourself.
 
@@ -92,7 +97,7 @@ Installation of `HackBrowserData` is dead-simple, just download [the release for
 only support `go 1.18+` with go generics
 
 ```bash
-$ git clone https://github.com/moonD4rk/HackBrowserData
+$ git clone https://github.com/chiww/HackBrowserData
 
 $ cd HackBrowserData/cmd/hack-browser-data
 
@@ -131,7 +136,7 @@ NAME:
 USAGE:
    [hack-browser-data -b chrome -f json -dir results -cc]
    Export all browingdata(password/cookie/history/bookmark) from browser
-   Github Link: https://github.com/moonD4rk/HackBrowserData
+   Github Link: https://github.com/chiww/HackBrowserData
 
 VERSION:
    0.5.0
@@ -190,7 +195,7 @@ PS C:\Users\User\Desktop> .\hack-browser-data.exe -b chrome -p "C:\Users\User\Ap
 ![](/CONTRIBUTORS.svg)
 
 ## Stargazers over time
-[![Star History Chart](https://api.star-history.com/svg?repos=moond4rk/hackbrowserdata&type=Date)](https://github.com/moond4rk/HackBrowserData)
+[![Star History Chart](https://api.star-history.com/svg?repos=moond4rk/hackbrowserdata&type=Date)](https://github.com/chiww/HackBrowserData)
 
 
 ## 404StarLink 2.0 - Galaxy

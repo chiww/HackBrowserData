@@ -5,6 +5,11 @@
 
 # HackBrowserData
 
+```
+本项目follow自 https://github.com/moonD4rk/HackBrowserData, 谢谢moonD4rk开源! 
+```
+
+
 `HackBrowserData` 是一个浏览器数据（密码|历史记录|Cookie|书签|信用卡|下载记录|localStorage|浏览器插件）的导出工具，支持全平台主流浏览器。
 
 
@@ -79,7 +84,7 @@
 ## 安装运行
 ### 安装
 
-可下载已编译好，可直接运行的 [二进制文件](https://github.com/moonD4rk/HackBrowserData/releases)
+可下载已编译好，可直接运行的 [二进制文件](https://github.com/chiww/HackBrowserData/releases)
 
 > 某些情况下，这款安全工具会被 Windows Defender 或其他杀毒软件当作病毒导致无法执行。代码已经全部开源，可自行编译。
 
@@ -88,7 +93,7 @@
 仅支持 `go 1.18+` 以后版本，一些函数使用到了泛型
 
 ``` bash
-$ git clone https://github.com/moonD4rk/HackBrowserData
+$ git clone https://github.com/chiww/HackBrowserData
 
 $ cd HackBrowserData/cmd/hack-browser-data
 
@@ -126,7 +131,7 @@ NAME:
 USAGE:
    [hack-browser-data -b chrome -f json -dir results -cc]
    Export all browingdata(password/cookie/history/bookmark) from browser
-   Github Link: https://github.com/moonD4rk/HackBrowserData
+   Github Link: https://github.com/chiww/HackBrowserData
 
 VERSION:
    0.5.0
@@ -171,7 +176,7 @@ PS C:\test> .\hack-browser-data.exe -b all -f json --dir results -zip
 ![贡献者](/CONTRIBUTORS.svg)
 
 ## Stargazers over time
-[![Star History Chart](https://api.star-history.com/svg?repos=moond4rk/hackbrowserdata&type=Date)](https://github.com/moond4rk/HackBrowserData)
+[![Star History Chart](https://api.star-history.com/svg?repos=moond4rk/hackbrowserdata&type=Date)](https://github.com/chiww/HackBrowserData)
 
 ## 404StarLink 2.0 - Galaxy
 `HackBrowserData` 是 404Team [星链计划2.0](https://github.com/knownsec/404StarLink2.0-Galaxy) 中的一环，如果对 HackBrowserData 有任何疑问又或是想要找小伙伴交流，可以参考[星链计划的加群方式](https://github.com/knownsec/404StarLink2.0-Galaxy#community)。
